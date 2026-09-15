@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Sekolah - XI RPL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Utama Ketua (Siswa A) */
+        nav {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Kontainer untuk memanggil file produk & kontak terpisah */
+        .iframe-container {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Menghilangkan scrollbar bawaan iframe biar menyatu */
+        iframe {
+            width: 100%;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA (TUGAS SISWA A) -->
+    <nav>
+        <h2>Toko Online Merchandise SMK</h2>
+    </nav>
+
+    <!-- MEMANGGIL FILE PRODUK TERPISAH (TUGAS SISWA B) -->
+    <iframe src="produk.html" scrolling="no" id="iframe-produk"
+        onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';"></iframe>
+
+    <!-- MEMANGGIL FILE KONTAK TERPISAH (TUGAS SISWA C) -->
+    <iframe src="kontak.html" scrolling="no" id="iframe-kontak"
+        onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';"></iframe>
+
+</body>
+
+</html>
